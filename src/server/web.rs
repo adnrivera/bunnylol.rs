@@ -162,6 +162,7 @@ fn collect_user_bindings(config: &BunnylolConfig) -> Vec<BindingData> {
             let default_desc = match binding {
                 crate::config::UserBinding::Url { .. } => "User URL binding",
                 crate::config::UserBinding::Command { .. } => "User command binding",
+                crate::config::UserBinding::Nested { .. } => "User nested binding",
             };
             BindingData {
                 command: name.clone(),
